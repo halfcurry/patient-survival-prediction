@@ -1,0 +1,31 @@
+{
+    "family": "patient-survival-prediction-fargate",
+    "containerDefinitions": [
+        {
+            "name": "patient-survival-prediction",
+            "image": "653946085466.dkr.ecr.eu-north-1.amazonaws.com/patient-survival-prediction",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 8001,
+                    "hostPort": 8001,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::653946085466:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "volumes": [],
+    "placementConstraints": [],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072"
+}
